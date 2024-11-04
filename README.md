@@ -1,1 +1,1 @@
-## Create movieApp with ReactJs tailwindCss 
+## Create MovieApp with ReactJS Tailwind CSS 
