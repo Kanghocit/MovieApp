@@ -1,4 +1,5 @@
 import Header from "./components/Header/index";
+import ProductionHouse from "./components/ProductionHouse";
 import Slider from './components/Slider'
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <div >
         <Header />
         <Slider/>
+        <ProductionHouse/>
       </div>
     </>
   );

@@ -12,12 +12,12 @@ import { useState } from "react";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const menu = [
-    { name: "TRANG CHỦ", icon: <HiHome size={"20px"} /> },
-    { name: "TÌM KIẾM", icon: <HiMagnifyingGlass size={"20px"} /> },
-    { name: "XEM SAU", icon: <HiPlus size={"20px"} /> },
-    { name: "NGUỒN GỐC", icon: <HiStar size={"20px"} /> },
-    { name: "PHIM", icon: <HiPlayCircle size={"20px"} /> },
-    { name: "THỂ LOẠI", icon: <HiTv size={"20px"} /> },
+    { name: "TRANG CHỦ" },
+    { name: "TÌM KIẾM" },
+    { name: "XEM SAU" },
+    { name: "NGUỒN GỐC" },
+    { name: "PHIM" },
+    { name: "THỂ LOẠI" },
   ];
 
   return (
@@ -36,21 +36,15 @@ const Header = () => {
         <div className="flex md:hidden gap-8">
           {menu.map(
             (item, index) =>
-              index < 3 && <HeaderItem key={index} name={""} icon={item.icon} />
+              index < 3 && <HeaderItem key={index} name={item.name} icon={item.icon} />
           )}
           <div className="md:hidden" onClick={() => setToggle(!toggle)}>
             <HeaderItem name={""} icon={<HiDotsVertical size={"20px"} />} />
             {toggle ? (
-              <div className="absolute white mt-3 bg-[#121212] border-[1px] border-gray-700 p-3 px-5 py-4  ">
+              <div className="absolute white mt-3 bg-black border-[1px] border-gray-700 p-3 px-5 py-4 rounded ">
                 {menu.map(
                   (item, index) =>
-                    index > 3 && (
-                      <HeaderItem
-                        key={index}
-                        name={item.name}
-                        icon={item.icon}
-                      />
-                    )
+                    index > 3 && <HeaderItem key={index} name={item.name} />
                 )}
               </div>
             ) : null}

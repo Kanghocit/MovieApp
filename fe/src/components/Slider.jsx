@@ -37,14 +37,14 @@ const Slider = () => {
       />
 
       <div
-        className="flex overflow-x-auto w-full px-16 py-4 scrollbar-none scroll-smooth"
+        className="flex overflow-x-auto w-full px-16 py-4 scrollbar-none scroll-smooth "
         ref={elementRef}
       >
         {movieList.map((item, index) => (
           <img
             key={index}
             src={IMAGE_BASE_URL + item.backdrop_path}
-            className="min-w-full md:h-[310px] object-cover object-left-top mr-5"
+            className="min-w-full md:h-[310px] object-cover object-left-top mr-5 hover:border-[4px] border-gray-300 transition-all duration-100 ease-in"
             alt={`Movie ${index + 1}`}
           />
         ))}
