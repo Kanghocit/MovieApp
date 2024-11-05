@@ -26,6 +26,7 @@ const ProductionHouse = () => {
             src={item.video}
             autoPlay
             loop
+            muted
             playsInline
             className="absolute top-0 rounded-md z-0 opacity-0 hover:opacity-80"
           />
